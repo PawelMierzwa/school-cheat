@@ -1,0 +1,7 @@
+.podzial{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 10px solid #0000;
+    font-weight: bold;
+}
