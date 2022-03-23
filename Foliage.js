@@ -3,7 +3,9 @@ function siecing() {
     
 //    wynik.innerHTML =;
 }
+function maskaBinarnie() {
 
+}
 
 function spacjowanie() {
     let kropka= adres.value;
