@@ -17,7 +17,7 @@
 
     <div class="podzial">
             <h1>Podział sieci</h1>
-            <input type="text" id="adres" placeholder="Adres" onkeydown="spacjowanie()" maxlength="15" size="11"><br>
+            <input type="text" id="adres" placeholder="Adres" onkeydown="spacjowanie(); kropkowanie()" maxlength="15" size="11"><br>
             <select name="maska" id="maska">
                 <option value=0>/0 aka 0.0.0.0                 </option>
                 <option value=1>/1 aka 128.0.0.0               </option>
@@ -55,7 +55,7 @@
             </select><!-- (domyślnie 24 bity aka 255.255.255.0 aka 0xFFFFFF00) -->
             <br>
             <input type="button" id="Oblicz" value="Oblicz" onclick="Oblicz()"><br>
-            
+            <p id="licznik"></p>
             <div class='result'>
                 <span class=label>IP Address :</span>
                 <span class=value id=resIP></span>

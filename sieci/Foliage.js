@@ -3,12 +3,57 @@ function spacjowanie() {
     dot = dot.replaceAll(" ",".");
     adres.value = dot;
 }
-function spacjowaniePoTrzechLiczbach(){
-  let dot2 =
+
+function kropkowanie(){
+    let count = 0;
+    let text = adres.value;
+    
+    for (let x of text) {
+
+        if (x == "." && x == " ") {
+            count = 0;
+            break;
+        }
+
+        if(x >= 0 && x <= 9){
+            count++;
+        }
+    }
+    
+    if (count == 3) {
+        text = text + ".";
+        count = 0;
+    }
+    licznik.innerHTML = count;
+    adres.value = text;
+
+    //automatyczne wstawianie kropki po wpisaniu kolejno 3 liczb(od 0 do 9)
+    //nie moze działać jak była spacja lub kropka(cokolwiek innego) miedzy liczbami   
+}  
+
+/*/
+<fieldset>
+    <legend>Przeszukiwanie</legend>
+    Podaj liczbe=<input id="poleSzukaj"><br>
+    <input type="button" value="Wyszukaj" onclick="szukaj()">
+</fieldset>
+<p id="wynik4"> </p>
+
+function szukaj(){
+let szukana=parseInt(poleSzukaj.value);
+let licznik=0;
+for(let x of T){
+    if(x==szukana){
+licznik++;
+    }
 }
-
-
-
+if (licznik==0){
+}
+else(licznik!=0)
+wynik4.innerHTML="Podana liczba wystąpiła: "+licznik+" razy.";
+}
+/*/
+//slice przy krótszych adresach np. 10.0.10.1
 
 function Oblicz() {
 
