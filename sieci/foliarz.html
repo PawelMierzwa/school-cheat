@@ -48,13 +48,54 @@
                 <option value=26>/26 aka 255.255.255.192       </option>
                 <option value=27>/27 aka 255.255.255.224       </option>
                 <option value=28>/28 aka 255.255.255.240       </option>
-                <option value=29>/29 aka 255.255.255.248       </option>
                 <option value=30>/30 aka 255.255.255.252       </option>
+                <option value=29>/29 aka 255.255.255.248       </option>
                 <option value=31>/31 aka 255.255.255.254       </option>
                 <option value=32>/32 aka 255.255.255.255       </option>
             </select><!-- (domyślnie 24 bity aka 255.255.255.0 aka 0xFFFFFF00) -->
             <br>
-            <input type="button" id="Oblicz" value="Oblicz" onclick=siecing()"><br>
+            <input type="button" id="Oblicz" value="Oblicz" onclick="Oblicz()"><br>
+            
+            <div class='result'>
+                <span class=label>IP Address :</span>
+                <span class=value id=resIP></span>
+            </div>
+            <div class='result'>
+                <span class=label>Subnet mask :</span>
+                <span class=value id=resMask></span>
+            </div>
+            <div class='result'>
+                <span class=label>Net Address :</span>
+                <span class=value id=resNet></span>
+            </div>
+            <div class='result'>
+                <span class=label>Broadcast Address :</span>
+                <span class=value id=resBC></span>
+            </div>
+            <div class='result'>
+                <span class=label>Standard Class :</span>
+                <span class=value id=resClass></span>
+            </div>
+            <div class='result'>
+                <span class=label>Range :</span>
+                <span class=value id=resRange></span>
+            </div>
+            <div class='result'>
+                <span class=label>IP Binary :</span>
+                <span class=value id=resBinIP></span>
+            </div>
+            <div class='result'>
+                <span class=label>Mask Binary :</span>
+                <span class=value id=resBinMask></span>
+            </div>
+            <div class='result'>
+                <span class=label>Net Address Binary :</span>
+                <span class=value id=resBinNet></span>
+            </div>
+            <div class='result'>
+                <span class=label>BC Address Binary :</span>
+                <span class=value id=resBinBC></span>
+            </div>
     </div>
     <script src="Foliage.js"></script>
 </body>
