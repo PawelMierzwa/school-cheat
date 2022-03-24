@@ -27,9 +27,6 @@ function kropkowanie(){
         text = text + ".";
     }
     
-    licznik.innerHTML = count;
-    licznik2.innerHTML = count2;
-    liczba.innerHTML = x;
     adres.value = text;
 }
 
