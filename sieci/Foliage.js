@@ -4,67 +4,41 @@ function spacjowanie() {
     adres.value = dot;
 }
 
-// function kropkowanie(){
-//     let count = 0;
-//     let text = adres.value;
-    
-//     for (let x of text) {
+let count2 = 0;
+let count = 1;
 
-//         if (x == "." && x == " ") {
-//             count = 0;
-//             break;
-//         }
+function kropkowanie(){
+    let text = adres.value;
+    let x = text[count2-1];
+    count2 = text.length;
 
-//         if(x >= 0 && x <= 9){
-//             count++;
-//         }
-//     }
-    
-//     if (count == 3) {
-//         text = text + ".";
-//         count = 0;
-//     }
-//     licznik.innerHTML = count;
-//     adres.value = text;
-
-//     //automatyczne wstawianie kropki po wpisaniu kolejno 3 liczb(od 0 do 9)
-//     //nie moze działać jak była spacja lub kropka(cokolwiek innego) miedzy liczbami   
-// }  
-
-/*/
-<fieldset>
-    <legend>Przeszukiwanie</legend>
-    Podaj liczbe=<input id="poleSzukaj"><br>
-    <input type="button" value="Wyszukaj" onclick="szukaj()">
-</fieldset>
-<p id="wynik4"> </p>
-
-function szukaj(){
-let szukana=parseInt(poleSzukaj.value);
-let licznik=0;
-for(let x of T){
-    if(x==szukana){
-licznik++;
+    if(count2 >= 14){
+        count=1;
     }
+
+    if(x >= 0 && x <= 9){
+        if (count2 >= 14) return;
+        count++;
+    }
+
+    if (count == 3) {
+        if (count2 >= 14) return;
+        count = 0;
+        text = text + ".";
+    }
+    
+    licznik.innerHTML = count;
+    licznik2.innerHTML = count2;
+    liczba.innerHTML = x;
+    adres.value = text;
 }
-if (licznik==0){
-}
-else(licznik!=0)
-wynik4.innerHTML="Podana liczba wystąpiła: "+licznik+" razy.";
-}
-/*/
-//slice przy krótszych adresach np. 10.0.10.1
 
 function Oblicz() {
 
+    //get ip address
     let _adres = adres.value;
+    //split into 4 strings
     let ip = _adres.split(".",4);
-
-    // let q4 = _adres.slice(12,15);
-    // var q1=document.getElementById('q1').value;
-    // var q2=document.getElementById('q2').value;
-    // var q3=document.getElementById('q3').value;
-    // var q4=document.getElementById('q4').value;
 
     var _maska=document.getElementById('maska').value;
     //validate input value
