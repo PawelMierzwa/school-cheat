@@ -8,10 +8,17 @@
     <link rel="stylesheet" href="styleFoliage.css">
 </head>
 <body>
+    <div class="menu">
+        <a href="../index.html">Home</a>
+        <a href="foliarz.html" class="active">Foliarz</a>
+        <a href="../matma/matma.html">Matma</a>
+        <a href="../about/about.html">About</a>
+    </div>
+
     <div class="podzial">
-            <legend>Podział sieci</legend>
-            <input id="adres" onkeyup="spacjowanie()" maxlength="15"><br>
-            <select id="maska">
+            <h1>Podział sieci</h1>
+            <input type="text" id="adres" placeholder="Adres" onkeydown="spacjowanie()" maxlength="15" size="11"><br>
+            <select name="maska" id="maska">
                 <option value=0>/0 aka 0.0.0.0                 </option>
                 <option value=1>/1 aka 128.0.0.0               </option>
                 <option value=2>/2 aka 192.0.0.0               </option>

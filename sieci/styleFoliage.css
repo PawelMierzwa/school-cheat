@@ -1,0 +1,70 @@
+body {
+	background-color: rgb(224, 224, 224);
+	margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.podzial{
+	Left: 50%;
+  	transform: translateX(-50%);
+	position: absolute;
+	width: 40%;
+	height: 50%;
+	text-align: center;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 1px solid black;
+	background-color: rgb(227, 209, 230);
+    font-weight: bold;
+}
+
+#Oblicz{
+	margin-top: 20px;
+	top: 80%;
+	left: 50%;
+	transform: translateX(-50%);
+	position: absolute;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	padding: 1em 2em;
+	width: 10em;
+	border-radius: 1.5em;
+	color: #fff;
+	background-color: rgb(76, 114, 150);
+	transition-property: background-color;
+	transition-duration: 0.3s;
+}
+
+#Oblicz:hover, #Oblicz:focus {
+	background-color: rgb(88, 182, 189);
+}
+
+#adres{
+	font-size: large;
+}
+
+.menu {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+.menu a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+.menu a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+.menu a.active {
+    background-color: #eca8f5;
+    color: white;
+  }

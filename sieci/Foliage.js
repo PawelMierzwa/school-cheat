@@ -8,9 +8,9 @@ function maskaBinarnie() {
 }
 
 function spacjowanie() {
-    let kropka= adres.value;
-    kropka = kropka.replaceAll(" ",".");
-    adres.value = kropka;
+    let dot = adres.value;
+    dot = dot.replaceAll(" ",".");
+    adres.value = dot;
 }
 // function zamiana(){
 //     let tekst=pole.value;
