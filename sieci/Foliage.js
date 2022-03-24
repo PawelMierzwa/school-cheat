@@ -4,32 +4,32 @@ function spacjowanie() {
     adres.value = dot;
 }
 
-function kropkowanie(){
-    let count = 0;
-    let text = adres.value;
+// function kropkowanie(){
+//     let count = 0;
+//     let text = adres.value;
     
-    for (let x of text) {
+//     for (let x of text) {
 
-        if (x == "." && x == " ") {
-            count = 0;
-            break;
-        }
+//         if (x == "." && x == " ") {
+//             count = 0;
+//             break;
+//         }
 
-        if(x >= 0 && x <= 9){
-            count++;
-        }
-    }
+//         if(x >= 0 && x <= 9){
+//             count++;
+//         }
+//     }
     
-    if (count == 3) {
-        text = text + ".";
-        count = 0;
-    }
-    licznik.innerHTML = count;
-    adres.value = text;
+//     if (count == 3) {
+//         text = text + ".";
+//         count = 0;
+//     }
+//     licznik.innerHTML = count;
+//     adres.value = text;
 
-    //automatyczne wstawianie kropki po wpisaniu kolejno 3 liczb(od 0 do 9)
-    //nie moze działać jak była spacja lub kropka(cokolwiek innego) miedzy liczbami   
-}  
+//     //automatyczne wstawianie kropki po wpisaniu kolejno 3 liczb(od 0 do 9)
+//     //nie moze działać jak była spacja lub kropka(cokolwiek innego) miedzy liczbami   
+// }  
 
 /*/
 <fieldset>
@@ -58,12 +58,9 @@ wynik4.innerHTML="Podana liczba wystąpiła: "+licznik+" razy.";
 function Oblicz() {
 
     let _adres = adres.value;
+    let ip = _adres.split(".",4);
 
-    let q1 = _adres.slice(0,3);
-    let q2 = _adres.slice(4,7);
-    let q3 = _adres.slice(8,11);
-    let q4 = _adres.slice(12,15);
-
+    // let q4 = _adres.slice(12,15);
     // var q1=document.getElementById('q1').value;
     // var q2=document.getElementById('q2').value;
     // var q3=document.getElementById('q3').value;
@@ -72,36 +69,36 @@ function Oblicz() {
     var _maska=document.getElementById('maska').value;
     //validate input value
     if(
-        (q1>=0 && q1<=255) &&
-        (q2>=0 && q2<=255) &&
-        (q3>=0 && q3<=255) &&
-        (q4>=0 && q4<=255) &&
+        (ip[0]>=0 && ip[0]<=255) &&
+        (ip[1]>=0 && ip[1]<=255) &&
+        (ip[2]>=0 && ip[2]<=255) &&
+        (ip[3]>=0 && ip[3]<=255) &&
         (_maska>=0 && _maska<=32)
     )
         {
         //display IP address
-        document.getElementById('resIP').innerHTML=q1 + "." + q2 + "." + q3 + "." + q4;
+        document.getElementById('resIP').innerHTML=ip[0] + "." + ip[1] + "." + ip[2] + "." + ip[3];
 
         //get IP Address binaries
         var ipBin={};
-        ipBin[1]=String("00000000"+parseInt(q1,10).toString(2)).slice(-8);
-        ipBin[2]=String("00000000"+parseInt(q2,10).toString(2)).slice(-8);
-        ipBin[3]=String("00000000"+parseInt(q3,10).toString(2)).slice(-8);
-        ipBin[4]=String("00000000"+parseInt(q4,10).toString(2)).slice(-8);
+        ipBin[1]=String("00000000"+parseInt(ip[0],10).toString(2)).slice(-8);
+        ipBin[2]=String("00000000"+parseInt(ip[1],10).toString(2)).slice(-8);
+        ipBin[3]=String("00000000"+parseInt(ip[2],10).toString(2)).slice(-8);
+        ipBin[4]=String("00000000"+parseInt(ip[3],10).toString(2)).slice(-8);
 
         //decide standard class
         var standardClass="";
-        if(q1<=126) {
+        if(ip[0]<=126) {
             standardClass="A";
-        } else if (q1==127) {
+        } else if (ip[0]==127) {
             standardClass="loopback IP"
-        } else if (q1>=128 && q1<=191) {
+        } else if (ip[0]>=128 && ip[0]<=191) {
             standardClass="B";
-        }else if (q1>=192 && q1<=223) {
+        }else if (ip[0]>=192 && ip[0]<=223) {
             standardClass="C";
-        }else if (q1>=224 && q1<=239) {
+        }else if (ip[0]>=224 && ip[0]<=239) {
             standardClass="D (Multicast Address)";
-        }else if (q1>=240 && q1<=225) {
+        }else if (ip[0]>=240 && ip[0]<=225) {
             standardClass="E (Experimental)";
         }else {
             standardClass="Out of range";
