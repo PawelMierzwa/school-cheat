@@ -10,7 +10,7 @@
 <body>
     <div class="podzial">
             <h1>Podział sieci</h1>
-            <input type="text" id="adres" placeholder="Adres" onkeydown="kropkowanie()" maxlength="15" size="11"><br>
+            <input type="text" id="adres" placeholder="Adres" onkeydown="kropkowanie()" maxlength="15" size="15"><br>
             <select name="maska" id="maska">
                 <option value=0>/0 aka 0.0.0.0                 </option>
                 <option value=1>/1 aka 128.0.0.0               </option>
@@ -45,7 +45,7 @@
                 <option value=29>/29 aka 255.255.255.248       </option>
                 <option value=31>/31 aka 255.255.255.254       </option>
                 <option value=32>/32 aka 255.255.255.255       </option>
-            </select><!-- (domyślnie 24 bity aka 255.255.255.0 aka 0xFFFFFF00) -->
+            </select>
             <br>
             <input type="button" id="Oblicz" value="Oblicz" onclick="Oblicz()"><br>
 
