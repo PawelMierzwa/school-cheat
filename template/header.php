@@ -57,8 +57,7 @@
     height="50px"
 >
 
-<script src="template/js/menu.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/akhilarjun/tinylibs@latest/themejs/theme.min.js" onload="setupThemeIcon()"></script>
+<script src="template/js/menu.js" onload="setupThemeIcon()"></script>
 </body>
 </html>
 
