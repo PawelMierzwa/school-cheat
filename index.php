@@ -9,6 +9,8 @@
 </html>
 <?php
 
+    include 'template/header.html';
 	include 'engine/template.php';
+    include 'template/footer.html';
 
 ?>
