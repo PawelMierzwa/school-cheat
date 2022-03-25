@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,12 @@
     <title>Foliarz Podział Sieci</title>
     <link rel="stylesheet" href="template/css/foliage.css">
 </head>
+
 <body>
     <div class="podzial">
-            <h1>Podział sieci</h1>
-            <input type="text" name="adres" id="adres" size="15" maxlength="15" onkeydown="kropkowanie()"><br>
-            <select name="maska" id="maska">
+        <h1>Podział sieci</h1>
+        <input type="text" name="adres" id="adres" size="15" maxlength="15" onkeydown="kropkowanie()"><br>
+        <select name="maska" id="maska">
                 <option value=0>/0 aka 0.0.0.0                 </option>
                 <option value=1>/1 aka 128.0.0.0               </option>
                 <option value=2>/2 aka 192.0.0.0               </option>
@@ -46,59 +48,67 @@
                 <option value=31>/31 aka 255.255.255.254       </option>
                 <option value=32>/32 aka 255.255.255.255       </option>
             </select>
-            <br>
-            <input type="button" id="Oblicz" value="Oblicz" onclick="Oblicz()"><br>
+        <br>
+        <input type="button" id="Oblicz" value="Oblicz" onclick="Oblicz()"><br>
 
-            <!-- <p id="licznik"></p> -->
+        <!-- <p id="licznik"></p> -->
 
-            <div class='result'>
-                <span class=label>IP Address :</span>
-                <span class=value id=resIP></span>
-            </div>
-            <div class='result'>
-                <span class=label>Subnet mask :</span>
-                <span class=value id=resMask></span>
-            </div>
-            <div class='result'>
-                <span class=label>Net Address :</span>
-                <span class=value id=resNet></span>
-            </div>
-            <div class='result'>
-                <span class=label>Broadcast Address :</span>
-                <span class=value id=resBC></span>
-            </div>
-            <div class='result'>
-                <span class=label>Standard Class :</span>
-                <span class=value id=resClass></span>
-            </div>
-            <div class='result'>
-                <span class=label>Range :</span>
-                <span class=value id=resRange></span>
-            </div>
-            <div class='result'>
-                <span class=label>IP Binary :</span>
-                <span class=value id=resBinIP></span>
-            </div>
-            <div class='result'>
-                <span class=label>Mask Binary :</span>
-                <span class=value id=resBinMask></span>
-            </div>
-            <div class='result'>
-                <span class=label>Net Address Binary :</span>
-                <span class=value id=resBinNet></span>
-            </div>
-            <div class='result'>
-                <span class=label>BC Address Binary :</span>
-                <span class=value id=resBinBC></span>
-            </div>
+        <div class='result'>
+            <span class=label>IP Address :</span>
+            <span class=value id=resIP></span>
+        </div>
+        <div class='result'>
+            <span class=label>Subnet mask :</span>
+            <span class=value id=resMask></span>
+        </div>
+        <div class='result'>
+            <span class=label>Net Address :</span>
+            <span class=value id=resNet></span>
+        </div>
+        <div class='result'>
+            <span class=label>Broadcast Address :</span>
+            <span class=value id=resBC></span>
+        </div>
+        <div class='result'>
+            <span class=label>Standard Class :</span>
+            <span class=value id=resClass></span>
+        </div>
+        <div class='result'>
+            <span class=label>Range :</span>
+            <span class=value id=resRange></span>
+        </div>
+        <div class='result'>
+            <span class=label>IP Binary :</span>
+            <span class=value id=resBinIP></span>
+        </div>
+        <div class='result'>
+            <span class=label>Mask Binary :</span>
+            <span class=value id=resBinMask></span>
+        </div>
+        <div class='result'>
+            <span class=label>Net Address Binary :</span>
+            <span class=value id=resBinNet></span>
+        </div>
+        <div class='result'>
+            <span class=label>BC Address Binary :</span>
+            <span class=value id=resBinBC></span>
+        </div>
     </div>
     <script src="template/js/Foliage.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script src="template/js/jquery.js"></script>
+    <script src="template/js/jquery.mask.js"></script>
     <script>
-        $(document).ready(function(){
-            $('input[name="adres"]').mask('0ZZ.0ZZ.0ZZ.0ZZ', { translation: { 'Z': { pattern: /[0-9]/, optional: true } } });
+        $(document).ready(function() {
+            $('input[name="adres"]').mask('0ZZ.0ZZ.0ZZ.0ZZ', {
+                translation: {
+                    'Z': {
+                        pattern: /[0-9]/,
+                        optional: true
+                    }
+                }
+            });
         });
     </script>
 </body>
+
 </html>
