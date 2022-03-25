@@ -1,3 +1,3 @@
 <div class="content">
-    <img src="template/placeholder.png">
+    <img src="template/img/placeholder.png">
 </div>
