@@ -1,4 +1,4 @@
-/*function spacjowanie() {
+function spacjowanie() {
     let dot = adres.value;
     dot = dot.replaceAll(" ",".");
     adres.value = dot;
@@ -42,7 +42,7 @@ function kropkowanie(){
     
     adres.value = text;
 }
-*/
+
 
 function Oblicz() {
 

@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foliarz Podział Sieci</title>
     <link rel="stylesheet" href="template/css/foliage.css">
+    <link rel="stylesheet" href="template/css/ipInput.css">
 </head>
 <body>
     <div class="podzial">
             <h1>Podział sieci</h1>
-            <input type="text" id="adres" placeholder="Adres" onkeypress="kropkowanie()" maxlength="15" size="15" 
-            pattern="^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$"><br>
+            <div id="ip"></div>
             <select name="maska" id="maska">
                 <option value=0>/0 aka 0.0.0.0                 </option>
                 <option value=1>/1 aka 128.0.0.0               </option>
@@ -94,5 +94,8 @@
             </div>
     </div>
     <script src="template/js/Foliage.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="template/js/ipInput.js"></script>
+
 </body>
 </html>
