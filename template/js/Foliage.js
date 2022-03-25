@@ -13,16 +13,14 @@ let count = 1;
     //x = ostatnio wpisany znak :)
     
         let text = adres.value;
-        let x = text[count2-1];
-        let y = text[count2-2];
+        let x = text.slice(-1);
+        let y = text.slice(-2);
 
-        if(x == " "){
-            if (y != ".") {
-                spacjowanie();
-            }
-            else{
-                text.pop();
-            }
+        if(x == " " && y == "."){
+            text = text.pop()
+        }
+        if(x ==" " && y != "."){
+            spacjowanie();
         }
 
         count2 = text.length;
