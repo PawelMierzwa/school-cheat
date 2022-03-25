@@ -8,7 +8,7 @@
         $file = $_SERVER['REQUEST_URI'];
 
         switch($file){
-            case 'foliage'
+            case '/foliage':
                 echo '
                     <div class="menu">
                     <a href="/">Home</a>
@@ -18,7 +18,7 @@
                     </div>
                     ';
                 break;
-            case 'matma'
+            case '/matma':
                 echo '
                     <div class="menu">
                     <a href="/">Home</a>
@@ -28,7 +28,7 @@
                     </div>
                     ';
                 break;
-            case 'about'
+            case '/about':
                 echo '
                     <div class="menu">
                     <a href="/">Home</a>
@@ -38,7 +38,7 @@
                     </div>
                     ';
                 break;
-            default ''
+            default:
                 echo '
                     <div class="menu">
                     <a class="active" href="/">Home</a>
