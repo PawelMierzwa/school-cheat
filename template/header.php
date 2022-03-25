@@ -52,7 +52,10 @@
     data-dark-src="template/img/moon.svg"
     alt="light theme" 
     id="theme-selector"
-    onclick="switchTheme(this)">
+    onclick="switchTheme(this)"
+    width="50px"
+    height="50px">
+
 <script src="template/js/menu.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/akhilarjun/tinylibs@latest/themejs/theme.min.js" onload="setupThemeIcon()"></script>
 </body>
