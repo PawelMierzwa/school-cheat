@@ -1,1 +1,1 @@
-©School-Cheat 2022
+<footer> ©School-Cheat 2022 </footer>
