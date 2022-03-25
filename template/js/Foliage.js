@@ -7,40 +7,47 @@ function spacjowanie() {
 let count2 = 0;
 let count = 1;
 
+
 function kropkowanie(){
-    //x = ostatnio wpisany znak :)
 
-    let text = adres.value;
-    let x = text[count2-1];
-    let y = text[count2-2];
+    // //x = ostatnio wpisany znak :)
 
-    if(x == " "){
-        if (y != ".") {
-            spacjowanie();
-        }
-        else{
-            text.value.slice(0, -1);
-        }
-    }
-    count2 = text.length;
 
-    if(count2 >= 14){
-        count=1;
-    }
-
-    if(x >= 0 && x <= 9){
-        // if (count2 >= 14) return;
-        count++;
-    }
-
-    if (count == 3) {
-        // if (count2 >= 14) return;
-        count = 0;
-        text = text + ".";
-        i = 0;
-    }
+    // let _kropkowac = kropkowac.value;
     
-    adres.value = text;
+    // if (_kropkowac) {
+    //     let text = adres.value;
+    //     let x = text[count2-1];
+    //     let y = text[count2-2];
+
+    //     if(x == " "){
+    //         if (y != ".") {
+    //             spacjowanie();
+    //         }
+    //         else{
+    //             text.value.slice(0, -1);
+    //         }
+    //     }
+    //     count2 = text.length;
+
+    //     if(count2 >= 14){
+    //         count=1;
+    //     }
+
+    //     if(x >= 0 && x <= 9){
+    //         if (count2 >= 14) return;
+    //         count++;
+    //     }
+
+    //     if (count == 3) {
+    //         if (count2 >= 14) return;
+    //         count = 0;
+    //         text = text + ".";
+    //         i = 0;
+    //     }
+        
+    //     adres.value = text;
+    // }
 }
 
 

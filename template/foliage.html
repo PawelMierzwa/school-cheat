@@ -11,7 +11,24 @@
 <body>
     <div class="podzial">
             <h1>Podział sieci</h1>
-            <div id="ip"></div>
+            <input type="checkbox" id="kropowac">
+            <input type="text" id="adres" size="15" maxlength="15" onkeydown="kropkowanie()">
+
+            <script>
+                $(function(){
+                    $("#adres").mask("999.999.999.999", {placeholder: "192.168.0.1" });
+                });
+
+                // var dateMask = IMask(
+                //     document.getElementById('address-mask'),
+                // {
+                //         mask: Address,
+                //         min: new Address(1, 1, 1, 1),
+                //         max: new Address(255, 255, 255, 255),
+                //         lazy: false
+                // }) 
+            </script>
+
             <select name="maska" id="maska">
                 <option value=0>/0 aka 0.0.0.0                 </option>
                 <option value=1>/1 aka 128.0.0.0               </option>
@@ -94,8 +111,6 @@
             </div>
     </div>
     <script src="template/js/Foliage.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="template/js/ipInput.js"></script>
 
 </body>
 </html>
