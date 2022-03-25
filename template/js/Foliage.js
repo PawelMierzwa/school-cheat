@@ -1,4 +1,4 @@
-function spacjowanie() {
+/*function spacjowanie() {
     let dot = adres.value;
     dot = dot.replaceAll(" ",".");
     adres.value = dot;
@@ -42,6 +42,14 @@ function kropkowanie(){
     
     adres.value = text;
 }
+*/
+
+var ipv4_address = $('#adres');
+ipv4_address.inputmask({
+    alias: "ip",
+    greedy: false
+});
+
 
 function Oblicz() {
 
