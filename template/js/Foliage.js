@@ -20,6 +20,8 @@ function kropkowanie(){
             spacjowanie();
             i = 1;
         }
+        text.slice(0, -1);
+        adres.innerHTML = text;
     }
     if(i == 1){
         if(x == " "){
