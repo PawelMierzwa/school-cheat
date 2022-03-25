@@ -11,12 +11,13 @@
     if($file==""){
         include $dir.'index.tpl';
     }
-    if (file_exists($dir.$file.'.tpl')) {
-        include $dir.$file.'.tpl';
+    else{
+        if (file_exists($dir.$file.'.tpl')) {
+            include $dir.$file.'.tpl';
+        }
+        else {
+            include 'error.php';
+        }
     }
-    else {
-        include 'error.php';
-    }
-
     include $dir.'footer.tpl';
 ?>
