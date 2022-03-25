@@ -54,7 +54,8 @@
     id="theme-selector"
     onclick="switchTheme(this)"
     width="50px"
-    height="50px">
+    height="50px"
+>
 
 <script src="template/js/menu.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/akhilarjun/tinylibs@latest/themejs/theme.min.js" onload="setupThemeIcon()"></script>

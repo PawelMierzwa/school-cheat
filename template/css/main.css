@@ -12,11 +12,14 @@ body {
   }
 }
 
-[data-theme='light'] {
+[data-theme='dark'] {
   filter: invert(1) hue-rotate(180deg);
 }
-[data-theme='dark'] {
-  filter: invert(0) hue-rotate(0deg);
+html[data-theme="dark"] h1 span:after {
+  content: "DARK MODE"
+}
+html[data-theme="light"] h1 span:after {
+  content: "LIGHT MODE"
 }
 
 /*/
