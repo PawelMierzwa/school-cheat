@@ -5,16 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foliarz Podział Sieci</title>
-    <link rel="stylesheet" href="../css/foliage.css">
+    <link rel="stylesheet" href="./template/css/foliage.css">
 </head>
 <body>
-    <div class="menu">
-        <a href="../index.html">Home</a>
-        <a href="foliarz.html" class="active">Foliarz</a>
-        <a href="../matma/matma.html">Matma</a>
-        <a href="../about/about.html">About</a>
-    </div>
-
     <div class="podzial">
             <h1>Podział sieci</h1>
             <input type="text" id="adres" placeholder="Adres" onkeydown="kropkowanie()" maxlength="15" size="11"><br>
@@ -99,6 +92,6 @@
                 <span class=value id=resBinBC></span>
             </div>
     </div>
-    <script src="Foliage.js"></script>
+    <script src="template/js/Foliage.js"></script>
 </body>
 </html>

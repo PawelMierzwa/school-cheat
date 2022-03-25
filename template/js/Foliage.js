@@ -2,21 +2,30 @@ function spacjowanie() {
     let dot = adres.value;
     dot = dot.replaceAll(" ",".");
     adres.value = dot;
-    //if x == "."
 }
 
 let count2 = 0;
 let count = 1;
+let i = 0;
 
 function kropkowanie(){
+    //x = ostatnio wpisany znak :)
+
     let text = adres.value;
     let x = text[count2-1];
     count2 = text.length;
 
     if (x == " ") {
-        spacjowanie();
+        if(i==0){
+            spacjowanie();
+            i = 1;
+        }
     }
-
+    if(i == 1){
+        if(x == " "){
+            text.pop();
+        }
+    }
     if(count2 >= 14){
         count=1;
     }
@@ -30,6 +39,7 @@ function kropkowanie(){
         if (count2 >= 14) return;
         count = 0;
         text = text + ".";
+        i = 0;
     }
     
     adres.value = text;
