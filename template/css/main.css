@@ -12,10 +12,10 @@ body {
   }
 }
 
-[data-theme='dark'] {
+[data-theme='light'] {
   filter: invert(1) hue-rotate(180deg);
 }
-[data-theme='light'] {
+[data-theme='dark'] {
   filter: invert(0) hue-rotate(0deg);
 }
 
