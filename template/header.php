@@ -47,9 +47,9 @@
     ?>
     </div>
 <!--<img onclick="" > -->
-<img src="./sun.svg" 
-    data-light-src="./img/sun.svg" 
-    data-dark-src="./img/moon.svg"
+<img src="template/img/sun.svg" 
+    data-light-src="template/img/sun.svg" 
+    data-dark-src="template/img/moon.svg"
     alt="light theme" 
     id="theme-selector"
     onclick="switchTheme(this)">

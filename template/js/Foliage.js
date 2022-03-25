@@ -13,7 +13,6 @@ function kropkowanie(){
     let text = adres.value;
     let x = text[count2-1];
     let y = text[count2-2];
-    count2 = text.length;
 
     if(x == " "){
         if (y != ".") {
@@ -23,18 +22,19 @@ function kropkowanie(){
             text.value.slice(0, -1);
         }
     }
+    count2 = text.length;
 
     if(count2 >= 14){
         count=1;
     }
 
     if(x >= 0 && x <= 9){
-        if (count2 >= 14) return;
+        // if (count2 >= 14) return;
         count++;
     }
 
     if (count == 3) {
-        if (count2 >= 14) return;
+        // if (count2 >= 14) return;
         count = 0;
         text = text + ".";
         i = 0;
