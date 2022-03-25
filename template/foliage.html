@@ -12,21 +12,21 @@
     <div class="podzial">
             <h1>Podział sieci</h1>
             <input type="checkbox" id="kropowac">
-            <input type="text" id="adres" size="15" maxlength="15" onkeydown="kropkowanie()">
+            <input type="text" id="adres" size="15" maxlength="15">
+            <!--onkeydown="kropkowanie()"-->
 
             <script>
-                $(function(){
-                    $("#adres").mask("999.999.999.999", {placeholder: "192.168.0.1" });
-                });
+                // $(function(){
+                //     $("#adres").mask("999.999.999.999", {placeholder: "192.168.0.1" });
+                // });
 
-                // var dateMask = IMask(
-                //     document.getElementById('address-mask'),
-                // {
-                //         mask: Address,
-                //         min: new Address(1, 1, 1, 1),
-                //         max: new Address(255, 255, 255, 255),
-                //         lazy: false
-                // }) 
+                 var addressMask = IMask(document.getElementById('adres'),
+                 {
+                         mask: Address,
+                         min: new Address(1, 1, 1, 1),
+                         max: new Address(255, 255, 255, 255),
+                         lazy: false
+                 }) 
             </script>
 
             <select name="maska" id="maska">

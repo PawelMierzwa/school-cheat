@@ -8,7 +8,7 @@ let count2 = 0;
 let count = 1;
 
 
-function kropkowanie(){
+// function kropkowanie(){
 
     // //x = ostatnio wpisany znak :)
 
@@ -48,7 +48,7 @@ function kropkowanie(){
         
     //     adres.value = text;
     // }
-}
+// }
 
 
 function Oblicz() {
