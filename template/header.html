@@ -3,14 +3,21 @@
     <link rel="stylesheet" href="template/css/menu.css" type="text/css">
 </head>
 <body>
+
+    <?php
+        $file = $_SERVER['REQUEST_URI'];
+    ?>
 <div class="menu">
-    <a class="active" href="/">Home</a>
-    <a href="/sieci">Foliarz</a>
+    <a href="/">Home</a>
+    <a href="/foliage">Foliarz</a>
     <a href="/matma">Matma</a>
     <a href="/about">About</a>
 </div>
 <!--<img onclick="" > -->
-<button class="dark" onclick="DarkTheme()"></button>
+<input type="image" src="" class="dark" onclick="DarkTheme()"></button>
 <script src="template/js/menu.js"></script>
 </body>
 </html>
+
+
+<a class="active" href="/">Home</a>

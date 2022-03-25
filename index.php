@@ -9,7 +9,7 @@
 </html>
 <?php
 
-    include 'template/header.html';
+    include 'template/header.php';
 	include 'engine/template.php';
     include 'template/footer.html';
 
