@@ -44,13 +44,6 @@ function kropkowanie(){
 }
 */
 
-var ipv4_address = $('#adres');
-ipv4_address.inputmask({
-    alias: "ip",
-    greedy: false
-});
-
-
 function Oblicz() {
 
     //get ip address
