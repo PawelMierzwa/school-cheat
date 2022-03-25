@@ -1,6 +1,6 @@
 <?php
     // Ngine B)
-    $dir = 'template/'
+    $dir = 'template/';
 
     include $dir.'header.html';
 
