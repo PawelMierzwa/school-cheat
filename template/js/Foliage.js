@@ -6,26 +6,24 @@ function spacjowanie() {
 
 let count2 = 0;
 let count = 1;
-let i = 0;
 
 function kropkowanie(){
     //x = ostatnio wpisany znak :)
 
     let text = adres.value;
     let x = text[count2-1];
+    let y = text[count2-2];
     count2 = text.length;
 
-    if (x == " ") {
-        if(i==0){
-            spacjowanie();
-            i = 1;
-        }
-    }
     if(x == " "){
-        if(i == 1){
-            text.pop();
+        if (y != ".") {
+            spacjowanie();
+        }
+        else{
+            text.value.slice(0, -1);
         }
     }
+
     if(count2 >= 14){
         count=1;
     }

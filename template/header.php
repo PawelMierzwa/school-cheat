@@ -1,6 +1,8 @@
 <html>
 <head>
     <link rel="stylesheet" href="template/css/main.css" type="text/css">
+    <link rel="stylesheet" href="template/css/dark.css" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" href="template/css/light.css" media="(prefers-color-scheme: light)">
 </head>
 <body>
 
@@ -45,8 +47,14 @@
     ?>
     </div>
 <!--<img onclick="" > -->
-<input class="dark" onclick="DarkTheme()" value="&#9789"></button>
+<img src="./sun.svg" 
+    data-light-src="./img/sun.svg" 
+    data-dark-src="./img/moon.svg"
+    alt="light theme" 
+    id="theme-selector"
+    onclick="switchTheme(this)">
 <script src="template/js/menu.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/akhilarjun/tinylibs@latest/themejs/theme.min.js" onload="setupThemeIcon()"></script>
 </body>
 </html>
 

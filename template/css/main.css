@@ -5,11 +5,18 @@ body {
     color: white;
 }
 
-@media screen and (prefers-color-scheme: light) {
+@media screen and (prefers-color-scheme: dark) {
   body {
     background-color: rgb(224, 224, 224);
     color: black;
   }
+}
+
+[data-theme='dark'] {
+  filter: invert(1) hue-rotate(180deg);
+}
+[data-theme='light'] {
+  filter: invert(0) hue-rotate(0deg);
 }
 
 img {
