@@ -102,8 +102,8 @@
                 ?>
                 <ul class="nav navbar-nav navbar-right">
                     <li><img src="template/img/sun.svg" style="margin-top: 10px; margin-left:10px;" data-light-src="template/img/sun.svg" data-dark-src="template/img/moon.svg" alt="light theme" id="theme-selector" onclick="switchTheme(this)" width="30px" height="30px"></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 </ul>
             </div>
         </div>
@@ -111,7 +111,7 @@
 
     <script src="template/js/menu.js" onload="setupThemeIcon()"></script>
     <script src="template/js/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="template/js/bootstrap.min.js"></script>
 </body>
 
 </html>

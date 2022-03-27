@@ -8,9 +8,9 @@
 </head>
 </html>
 <?php
+    session_start();
 
     include 'template/header.php';
 	include 'engine/template.php';
-    include 'template/footer.html';
 
 ?>
