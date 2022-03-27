@@ -4,45 +4,6 @@ function spacjowanie() {
     adres.value = dot;
 }
 
-let count2 = 0;
-let count = 1;
-
-
-//  function kropkowanie(){
-
-//     //x = ostatni wpisany znak :)
-//     //y = przedostatni wpisany znak :)
-    
-//         let text = adres.value;
-//         let x = text.slice(-1);
-//         let y = text.slice(-2);
-
-//         if(x == " " && y == "."){
-//             text = text.pop()
-//         }
-//         if(x ==" " && y != "."){
-//             spacjowanie();
-//         }
-
-//         count2 = text.length;
-//         if(count2 >= 14){
-//             count=1;
-//         }
-//         if(x >= 0 && x <= 9){
-//             if (count2 >= 14) return;
-//             count++;
-//         }
-//         if (count == 3) {
-//             if (count2 >= 14) return;
-//             count = 0;
-//             text = text + ".";
-//             i = 0;
-//         }
-     
-//         adres.value = text;
-//  }
-
-
 function Oblicz() {
 
     //get ip address

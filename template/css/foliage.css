@@ -2,8 +2,8 @@
 	Left: 50%;
   	transform: translateX(-50%);
 	position: absolute;
-	width: 40%;
-	height: 50%;
+	width: 50%;
+	height: 70%;
 	text-align: center;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -12,6 +12,11 @@
 	background-color: rgb(227, 209, 230);
 	color: black;
     font-weight: bold;
+}
+
+.result{
+	font-size: large;
+	color: black;
 }
 
 #Oblicz{
@@ -39,8 +44,3 @@
 #adres{
 	font-size: large;
 }
-
-.dark-mode ~ .podzial {
-	background-color: rgb(27, 25, 25);
-	color: black;
-  }
