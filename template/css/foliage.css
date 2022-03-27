@@ -14,9 +14,9 @@
     font-weight: bold;
 }
 
-.result{
+.results, .labels{
 	font-size: large;
-	color: black;
+	color: black
 }
 
 #Oblicz{

@@ -12,7 +12,7 @@
 <body>
     <div class="podzial">
         <h1>Podział sieci</h1>
-        <input type="text" name="adres" id="adres" size="15" maxlength="15" onkeydown="kropkowanie()"><br>
+        <input type="text" name="adres" id="adres" size="15" maxlength="15" placeholder="Adres"><br>
         <select name="maska" id="maska">
                 <option value=0>/0 aka 0.0.0.0                 </option>
                 <option value=1>/1 aka 128.0.0.0               </option>
@@ -51,45 +51,45 @@
         <br>
         <input type="button" id="Oblicz" value="Oblicz" onclick="Oblicz()"><br>
 
-        <div class='result'>
-            <span class=label>IP Address :</span>
-            <span class=value id=resIP></span>
+        <div class='results'>
+            <span class="labels">IP Address :</span>
+            <span class="value" id="resIP"></span>
         </div>
-        <div class='result'>
-            <span class=label>Subnet mask :</span>
-            <span class=value id=resMask></span>
+        <div class='results'>
+            <span class="labels">Subnet mask :</span>
+            <span class="value" id="resMask"></span>
         </div>
-        <div class='result'>
-            <span class=label>Net Address :</span>
-            <span class=value id=resNet></span>
+        <div class='results'>
+            <span class="labels">Net Address :</span>
+            <span class="value" id="resNet"></span>
         </div>
-        <div class='result'>
-            <span class=label>Broadcast Address :</span>
-            <span class=value id=resBC></span>
+        <div class='results'>
+            <span class="labels">Broadcast Address :</span>
+            <span class="value" id="resBC"></span>
         </div>
-        <div class='result'>
-            <span class=label>Standard Class :</span>
-            <span class=value id=resClass></span>
+        <div class='results'>
+            <span class="labels">Standard Class :</span>
+            <span class="value" id="resClass"></span>
         </div>
-        <div class='result'>
-            <span class=label>Range :</span>
-            <span class=value id=resRange></span>
+        <div class='results'>
+            <span class="labels">Range :</span>
+            <span class="value" id="resRange"></span>
         </div>
-        <div class='result'>
-            <span class=label>IP Binary :</span>
-            <span class=value id=resBinIP></span>
+        <div class='results'>
+            <span class="labels">IP Binary :</span>
+            <span class="value" id="resBinIP"></span>
         </div>
-        <div class='result'>
-            <span class=label>Mask Binary :</span>
-            <span class=value id=resBinMask></span>
+        <div class='results'>
+            <span class="labels">Mask Binary :</span>
+            <span class="value" id="resBinMask"></span>
         </div>
-        <div class='result'>
-            <span class=label>Net Address Binary :</span>
-            <span class=value id=resBinNet></span>
+        <div class='results'>
+            <span class="labels">Net Address Binary :</span>
+            <span class="value" id="resBinNet"></span>
         </div>
-        <div class='result'>
-            <span class=label>BC Address Binary :</span>
-            <span class=value id=resBinBC></span>
+        <div class='results'>
+            <span class="labels">BC Address Binary :</span>
+            <span class="value" id="resBinBC"></span>
         </div>
     </div>
     <script src="template/js/Foliage.js"></script>
