@@ -16,7 +16,7 @@ if (isset($_POST['password'])) {
 }
 
 if (empty($login) or empty($password)){
-    $error = "Wprowadziliście nie wszystko!";
+    $error = "Nie wprowadzono wszystkiego!";
     $_SESSION['error'] = $error;
     header('Location: /login');
 }
@@ -35,7 +35,7 @@ $result = mysqli_query($db, "SELECT * FROM users WHERE username='$login'");
 
 $myrow = mysqli_fetch_array($result);
 if (empty($myrow['password'])){
-    $error = "Wprowadziliście zły login lub hasło.";
+    $error = "Wprowadzono zły login lub hasło.";
     $_SESSION['error'] = $error;
     header('Location: /login');
 }
@@ -48,7 +48,7 @@ else {
         header('Location: /cabinet');
     }
     else {
-        $error = "Wprowadziliście zły login lub hasło.";
+        $error = "Wprowadzono zły login lub hasło.";
         $_SESSION['error'] = $error;
         header('Location: /login');
     }

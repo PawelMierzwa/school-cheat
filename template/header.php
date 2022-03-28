@@ -2,8 +2,6 @@
 
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="template/css/dark.css" media="(prefers-color-scheme: dark)">
-    <link rel="stylesheet" href="template/css/light.css" media="(prefers-color-scheme: light)">
     <link rel="stylesheet" href="template/css/main.css" type="text/css">
 </head>
 
@@ -101,7 +99,6 @@
                 }
                 ?>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><img src="template/img/sun.svg" style="margin-top: 10px; margin-left:10px;" data-light-src="template/img/sun.svg" data-dark-src="template/img/moon.svg" alt="light theme" id="theme-selector" onclick="switchTheme(this)" width="30px" height="30px"></li>
                     <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
                     <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 </ul>
@@ -109,9 +106,29 @@
         </div>
     </nav>
 
-    <script src="template/js/menu.js" onload="setupThemeIcon()"></script>
     <script src="template/js/jquery.js"></script>
     <script src="template/js/bootstrap.min.js"></script>
+    <script src="template/js/darkmode-js.min.js"></script>
+    <script>
+        const options = {
+            bottom: '64px', // default: '32px'
+            right: 'unset', // default: '32px'
+            left: '32px', // default: 'unset'
+            time: '0.4s', // default: '0.3s'
+            mixColor: '#fff', // default: '#fff'
+            backgroundColor: '#e0e0e0',  // default: '#fff'
+            buttonColorDark: '#100f2c',  // default: '#100f2c'
+            buttonColorLight: '#fff', // default: '#fff'
+            saveInCookies: true, // default: true,
+            label: '🌓', // default: ''
+            autoMatchOsTheme: true // default: true
+        }
+
+        function addDarkmodeWidget() {
+            new Darkmode().showWidget();
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+    </script>
 </body>
 
 </html>
