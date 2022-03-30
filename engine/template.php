@@ -14,7 +14,12 @@
             include $dir.$file.'.html';
         }
         else {
-            include 'error.php';
+            if(file_exists($dir.$file.'.php')){
+                include $dir.$file.'.php';
+            }
+            else{
+                include 'error.php';
+            }
         }
     }
 

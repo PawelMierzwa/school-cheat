@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zad18</title>
+   
+</head>
+<body>
+    <script>
+        let T=[];
+        function poczatek() {
+            const liczba=parseInt(pole.value);
+            T.unshift(liczba);
+            wynik.innerHTML=T.join(", ");
+        }
+        function koniec() {
+            const liczba=parseInt(pole.value);
+            T.push(liczba);
+            wynik.innerHTML=T.join(", ");
+        }
+        function dowolneMiejsce() {
+            const liczba=parseInt(pole.value);
+            const index=parseInt(prompt("Podaj index w tablicy"));
+            T.splice(index,0,liczba);
+            wynik.innerHTML=T.join(", ");
+        }
+        function usunPoczatek() {
+            const liczba=parseInt(pole.value);
+            T.shift(liczba);
+            wynik.innerHTML=T;
+        }
+        function usunKoniec() {
+            const liczba=parseInt(pole.value);
+            T.pop(liczba);
+            wynik.innerHTML=T;
+        }
+        function usunDowolneMiejsce() {
+            const liczba=parseInt(pole.value);
+            const index=parseInt(prompt("Podaj index w tablicy"));
+            const ile=parseInt(prompt("Ile elementow usuwamy"));
+            T.splice(index,ile);
+            wynik.innerHTML=T;
+        }
+     </script>
+    <fieldset>
+        <legend>Dodawanie elementów</legend>
+        <input id="pole"><br>
+        <input type="button" value="na koniec" onclick="koniec()">
+        <input type="button" value="na poczatek" onclick="poczatek()">
+        <input type="button" value="w dowolnym miejscu" onclick="dowolneMiejsce()">
+    </fieldset>
+    <fieldset>
+        <legend>Usuwanie elementów</legend>
+        <input id="pole"><br>
+        <input type="button" value="na koniec" onclick="usunKoniec()">
+        <input type="button" value="na poczatek" onclick="usunPoczatek()">
+        <input type="button" value="w dowolnym miejscu" onclick="usunDowolneMiejsce()">
+    </fieldset>
+    <br>
+    <hr>
+    <p id="wynik"></p>
+</body>
+</html>
