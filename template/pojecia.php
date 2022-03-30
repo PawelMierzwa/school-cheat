@@ -4,19 +4,7 @@
     <title>Pojęcia</title>
 </head>
 
-<?php
-    if(!empty($_GET['searchform'])){
-        $searcher = $_GET['searchform'];
-        if(!empty($searcher)){
-            header("Location: /pojecia#$searcher");
-        }
-    }
-?>
-
 <body>
-    <?php
-        include '/header'
-    ?>
     <div class="content">
         <div>
             <h1 style="text-align: center;">
@@ -57,11 +45,11 @@
             <div class="search">
                 <form>
                     <center>
-                        <form method="GET">
+                        <form method="POST">
                             <input type="text" name="searchform" placeholder="Search" size="25">
-                            <input type="submit" id="search-button">
+                            <button type="submit" id="search-button">
                                 <img src="template/img/search.svg" width="25px" height="25px">
-                            </input>
+                            </button>
                         </form>
                     </center>
                 </form>

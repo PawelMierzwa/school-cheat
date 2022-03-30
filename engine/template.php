@@ -18,7 +18,14 @@
                 include $dir.$file.'.php';
             }
             else{
-                include 'error.php';
+                $file1 = substr($file,0,8);
+                $search = substr($file,19,strlen($file));
+                if($file1=="pojecia?"){
+                    header('Location: pojecia#'.$search);
+                }
+                else{
+                    include 'error.php';
+                }
             }
         }
     }
