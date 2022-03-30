@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Zad19</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        img{
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+    <script>
+        function losuj() {
+            let Lotto=[];
+            wynik.innerHTML = null;
+            
+            let i = 1;
+            while(i<=6){
+                const los = Math.floor(Math.random()*49+1);
+                if(Lotto.indexOf(los)==-1){
+                    Lotto.push(los);
+                    i++;
+                }
+            }
+            for(let x of Lotto){
+                wynik.innerHTML += `<img src="/template/img/lotto/p${x}.png" width=100 height=100>`;
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <input type="button" value="losuj" onclick="losuj()">
+    <p id="wynik"></p>
+    
+</body>
+</html>
