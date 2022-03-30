@@ -14,9 +14,6 @@
 ?>
 
 <body>
-    <?php
-        include '/header'
-    ?>
     <div class="content">
         <div>
             <h1 style="text-align: center;">
