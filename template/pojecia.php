@@ -5,9 +5,11 @@
 </head>
 
 <?php
-    $searcher = $_GET['searchform'];
-    if(!empty($searcher)){
-        header("Location: /pojecia#$searcher");
+    if(!empty($_GET['searchform'])){
+        $searcher = $_GET['searchform'];
+        if(!empty($searcher)){
+            header("Location: /pojecia#$searcher");
+        }
     }
 ?>
 

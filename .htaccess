@@ -7,7 +7,7 @@ RewriteRule ^(.*)$ $1.php
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule (.*) index.php?=$1 [QSA,L]
+RewriteRule (.*) template/pojecia.php?=$1 [QSA,L]
 
 Options All -Indexes
 
