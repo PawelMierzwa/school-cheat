@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="template/css/bootstrap.min.css">
     <link rel="stylesheet" href="template/css/main.css" type="text/css">
 </head>
 
@@ -31,7 +31,13 @@
                                             <li><a href="/pojecia">Pojęcia</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="/matma">Matma</a></li>
+                                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/calc">Matma<span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/calc">Kalkulator</a></li>
+                                            <li><a href="/wzory">Wzory</a></li>
+                                            <li><a href="/wykres">Wykresy</a></li>
+                                        </ul>
+                                    </li>
                                     <li><a href="/about">About</a></li>
                                 </ul>
                             ';
@@ -46,12 +52,18 @@
                                             <li class="active"><a href="/pojecia">Pojęcia</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="/matma">Matma</a></li>
+                                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/calc">Matma<span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/calc">Kalkulator</a></li>
+                                            <li><a href="/wzory">Wzory</a></li>
+                                            <li><a href="/wykres">Wykresy</a></li>
+                                        </ul>
+                                    </li>
                                     <li><a href="/about">About</a></li>
                                 </ul>
                             ';
                         break;
-                    case '/matma':
+                    case '/calc':
                         echo '
                                 <ul class="nav navbar-nav">
                                     <li><a href="/">Home</a></li>
@@ -61,22 +73,76 @@
                                             <li><a href="/pojecia">Pojęcia</a></li>
                                         </ul>
                                     </li>
-                                    <li class="active"><a href="/matma">Matma</a></li>
+                                    <li class="dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" href="/calc">Matma<span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li class="active"><a href="/calc">Kalkulator</a></li>
+                                            <li><a href="/wzory">Wzory</a></li>
+                                            <li><a href="/wykres">Wykresy</a></li>
+                                        </ul>
+                                    </li>
                                     <li><a href="/about">About</a></li>
                                 </ul>
                             ';
                         break;
-                    case '/about':
-                        echo '
-                                <ul class="nav navbar-nav">
-                                    <li><a href="/">Home</a></li>
+                    case '/wzory':
+                            echo '
+                                    <ul class="nav navbar-nav">
+                                        <li><a href="/">Home</a></li>
                                         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/foliage">Sieci<span class="caret"></span></a>
                                             <ul class="dropdown-menu">
                                                 <li><a href="/foliage">Kalkulator IP</a></li>
                                                 <li><a href="/pojecia">Pojęcia</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="/matma">Matma</a></li>
+                                        <li class="dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" href="/calc">Matma<span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="/calc">Kalkulator</a></li>
+                                                <li class="active"><a href="/wzory">Wzory</a></li>
+                                                <li><a href="/wykres">Wykresy</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="/about">About</a></li>
+                                    </ul>
+                                ';
+                            break;
+                        case '/wykres':
+                                echo '
+                                        <ul class="nav navbar-nav">
+                                            <li><a href="/">Home</a></li>
+                                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/foliage">Sieci<span class="caret"></span></a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="/foliage">Kalkulator IP</a></li>
+                                                    <li><a href="/pojecia">Pojęcia</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/wzory">Matma<span class="caret"></span></a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="/calc">Kalkulator</a></li>
+                                                    <li><a href="/wzory">Wzory</a></li>
+                                                    <li class="active"><a href="/wykres">Wykresy</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="/about">About</a></li>
+                                        </ul>
+                                    ';
+                                break;
+                    case '/about':
+                        echo '
+                                <ul class="nav navbar-nav">
+                                    <li><a href="/">Home</a></li>
+                                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/foliage">Sieci<span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/foliage">Kalkulator IP</a></li>
+                                            <li><a href="/pojecia">Pojęcia</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/calc">Matma<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="/calc">Kalkulator</a></li>
+                                        <li><a href="/wzory">Wzory</a></li>
+                                        <li><a href="/wykres">Wykresy</a></li>
+                                    </ul>
+                                    </li>
                                     <li class="active"><a href="/about">About</a></li>
                                 </ul>
                             ';
@@ -91,7 +157,13 @@
                                                 <li><a href="/pojecia">Pojęcia</a></li>
                                             </ul>
                                         </li>
-                                    <li><a href="/matma">Matma</a></li>
+                                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="/calc">Matma<span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/calc">Kalkulator</a></li>
+                                            <li><a href="/wzory">Wzory</a></li>
+                                            <li><a href="/wykres">Wykresy</a></li>
+                                        </ul>
+                                    </li>
                                     <li><a href="/about">About</a></li>
                                 </ul>
                             ';

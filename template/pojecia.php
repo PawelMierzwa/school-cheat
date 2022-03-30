@@ -4,6 +4,13 @@
     <title>Pojęcia</title>
 </head>
 
+<?php
+    $searcher = $_GET['searchform'];
+    if(!empty($searcher)){
+        header("Location: /pojecia#$searcher");
+    }
+?>
+
 <body>
     <div class="content">
         <div>
@@ -45,10 +52,12 @@
             <div class="search">
                 <form>
                     <center>
-                        <input type="text" id="searchterm" placeholder="Search" size="25">
-                        <button type="submit" id="search-button">
-                            <img src="template/img/search.svg" width="25px" height="25px" onclick="finds()">
-                        </button>
+                        <form method="GET">
+                            <input type="text" name="searchform" placeholder="Search" size="25">
+                            <input type="submit" id="search-button">
+                                <img src="template/img/search.svg" width="25px" height="25px">
+                            </input>
+                        </form>
                     </center>
                 </form>
             </div>
@@ -2097,8 +2106,6 @@
 
         </div>
     </div>
-    <script src="template/js/jquery.js"></script>
-    <script src="template/js/pojecia.js"></script>
 </body>
 
 </html>
