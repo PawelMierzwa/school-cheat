@@ -48,7 +48,19 @@
                 <form>
                     <center>
                         <form method="POST">
-                            <input type="text" name="searchform" placeholder="Search" size="25">
+                            <select name="Wzór" id="wzor">
+                                <optgroup label="Planimetria">
+                                    <option>(P)Pole koła</option>
+                                    <option>(L)Długość okręgu</option>
+                                    <option>(P2)Pole dowolnego trójkąta</option>
+                                    <option>(P3)Pole dowolnego trójkąta2</option>
+                                    <option>(P4)Pole trójkąta równobocznego</option>
+                                    <option>(h)Wysokość trójkąta równobocznego</option>
+                                    <option></option>
+                                    <option></option>
+                                </optgroup>
+                            </select>
+                            <!-- <input type="text" name="searchform" placeholder="Search" size="25"> -->
                             <button type="submit" id="search-button">
                                 <img src="template/img/search.svg" width="25px" height="25px">
                             </button>
