@@ -14,35 +14,31 @@
 		$message = '
 		<html>
 		<head>
-		  <title>Przypomnienie hasła</title>
+		  <title>Восстановление пароля</title>
 		</head>
 		<body>
-		  <p>Przypomnienie hasła</p>
-		  Z konta ' . $login. 'otrzymał prośbę o zresetowanie hasła do konta. <br>Jeśli wysłałeś tę prośbę i chcesz mieć hasło do swojego konta, kliknij przycisk poniżej. <br>
-			<form action="https://
-                
-                
-                
-                /engine/token" method="post">
+		  <p>Восстановление пароля</p>
+		  От аккаунта ' . $login. ' поступила просьба восстановить пароль к аккаунту. <br>Если вы отправили этот запрос и хотите пароль к аккаунту то нажмите кнопку ниже. <br>
+			<form action="https://endergame.ru/functions/token" method="post">
 				<p>
 					<input name="user" type="hidden" value="'.$login.'">
 					<input name="token" type="hidden" value="'.$token.'">
 					<input name="type" type="hidden" value="recover">
 				</p>
 				<p>
-					<input type="submit" value="Przypomnij hasło" style="border-radius: 20px;">
-			</form><br>Jeśli go nie wysłałeś, po prostu zignoruj ​​ten e-mail..
+					<input type="submit" value="Восстановить" style="border-radius: 20px;">
+			</form><br>Если вы его не отправляли то просто проигнорируйте это письмо.
 		</body>
 		</html>
 		';
 		$headers  = 'MIME-Version: 1.0' . "\r\n";
 		$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-		mail($mail, "Przypomnienie hasła", $message, $headers);
-		$_SESSION['error'] = "Wysłano do Ciebie wiadomość e-mail potwierdzającą zmianę hasła.";
+		mail($mail, "Смена пароля", $message, $headers);
+		$_SESSION['error'] = "На почту было отправлено письмо с подтверждением о смене пароля";
 		header('Location: /recover');
 	}
 	else{
-		$_SESSION['error'] = "Poczta nie jest połączona z kontem, nie można odzyskać hasła";
+		$_SESSION['error'] = "К аккаунту не подключена почта, восстановить пароль невозможно";
 		header('Location: /recover');
 	}
 ?>

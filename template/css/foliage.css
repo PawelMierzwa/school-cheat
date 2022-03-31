@@ -1,46 +1,50 @@
-.podzial{
-	Left: 50%;
-  	transform: translateX(-50%);
-	position: absolute;
-	width: 50%;
-	height: 70%;
-	text-align: center;
+.podzial {
+    Left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    width: auto;
+    height: 65%;
+    text-align: center;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     border: 1px solid black;
-	background-color: rgb(227, 209, 230);
-	color: black;
+    background-color: rgb(227, 209, 230);
+    color: black;
     font-weight: bold;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
-.results, .labels{
-	font-size: large;
-	color: black
+.results,
+.labels {
+    font-size: large;
+    color: black
 }
 
-#Oblicz{
-	margin-top: 20px;
-	top: 80%;
-	left: 50%;
-	transform: translateX(-50%);
-	position: absolute;
-	display: block;
-	text-decoration: none;
-	text-align: center;
-	padding: 1em 2em;
-	width: 10em;
-	border-radius: 1.5em;
-	color: #fff;
-	background-color: rgb(76, 114, 150);
-	transition-property: background-color;
-	transition-duration: 0.3s;
+#Oblicz {
+    margin-top: 20px;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 1em 2em;
+    width: 10em;
+    border-radius: 1.5em;
+    color: #fff;
+    background-color: rgb(76, 114, 150);
+    transition-property: background-color;
+    transition-duration: 0.3s;
 }
 
-#Oblicz:hover, #Oblicz:focus {
-	background-color: rgb(88, 182, 189);
+#Oblicz:hover,
+#Oblicz:focus {
+    background-color: rgb(88, 182, 189);
 }
 
-#adres{
-	font-size: large;
+#adres {
+    font-size: large;
 }

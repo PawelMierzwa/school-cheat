@@ -1,0 +1,31 @@
+input{
+	padding: 5px;
+	font-size: 16px;
+	border-radius: 5px;
+	width: 50%;
+}
+
+select{
+	padding: 5px;
+	font-size: 16px;
+	border-radius: 5px;
+	width: 50%;
+}
+
+.pass{
+	text-align: center;
+}
+
+.block{
+	background-color: white;
+	padding: 10px;
+	width: 45%;
+	float: left;
+	border-radius: 5px;
+}
+
+.donate{
+	width: 100%;
+	color: white;
+	text-align: center;
+}

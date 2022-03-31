@@ -1,4 +1,4 @@
-import functionPlot from "./js/function.plot.js";
+import functionPlot from "./function.plot.js";
 
 let contentsBounds = document.body.getBoundingClientRect();
 let width = 800;
