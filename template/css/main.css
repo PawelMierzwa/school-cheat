@@ -5,7 +5,7 @@ body {
     color: black;
 }
 
-/* dark body {
-    background-color: #1b1919;
-    color: white;
-} */
+#content {
+    width: 80%;
+    margin-left: 10%;
+}

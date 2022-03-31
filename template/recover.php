@@ -10,7 +10,7 @@
     <body>
         <? echo $_SESSION['error'];?>
         <h2>Przypomnienie hasła</h2>
-        <form action="cabinet/recover.php" method="post">
+        <form action="cabinet/recover.php" method="post"  class="content">
         <p>
         <label>Login:<br></label>
         <input name="login" type="text" size="15" maxlength="15">

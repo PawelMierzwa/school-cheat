@@ -171,8 +171,19 @@
                 }
                 ?>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                    <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <?php
+                        if(empty($_SESSION['id'])){
+                            echo '
+                            <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                            <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                            ';
+                        }
+                        else{
+                            echo '
+                            <li><a href="/cabinet/logout"><span class="glyphicon glyphicon-user"></span> Logout</a></li>
+                            ';
+                        }
+                    ?>
                 </ul>
             </div>
         </div>
