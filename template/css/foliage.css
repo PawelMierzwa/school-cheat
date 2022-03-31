@@ -1,8 +1,8 @@
 .podzial {
-    Left: 50%;
+    left: 50%;
     transform: translateX(-50%);
     position: absolute;
-    width: auto;
+    width: 90%;
     height: 65%;
     text-align: center;
     box-sizing: border-box;
@@ -14,6 +14,7 @@
     font-weight: bold;
     padding-left: 2%;
     padding-right: 2%;
+    border-radius: 1.5em;
 }
 
 .results,
@@ -24,25 +25,26 @@
 
 #Oblicz {
     margin-top: 20px;
-    top: 80%;
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
     display: block;
     text-decoration: none;
     text-align: center;
+    font-size: x-large;
     padding: 1em 2em;
     width: 10em;
     border-radius: 1.5em;
     color: #fff;
-    background-color: rgb(76, 114, 150);
+    background-color: rgb(144, 76, 150);
     transition-property: background-color;
     transition-duration: 0.3s;
 }
 
 #Oblicz:hover,
 #Oblicz:focus {
-    background-color: rgb(88, 182, 189);
+    background-color: rgb(219, 116, 193);
 }
 
 #adres {

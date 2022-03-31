@@ -1,3 +1,11 @@
+.content{
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    display: block;
+}
+
 .calculator {
     width: 350px;
     height: 320px;

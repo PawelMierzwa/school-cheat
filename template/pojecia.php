@@ -8,7 +8,9 @@
     <div class="content">
         <div>
             <h1 style="text-align: center;">
-                <a name="menu" id="menu"></a>SŁOWNIK POJĘĆ TECHNICZNYCH</h1>
+                <a name="menu" id="menu"></a>
+                <b>SŁOWNIK POJĘĆ TECHNICZNYCH</b>
+            </h1>
             <br>
             <p align="center">
                 <b> [<a href="#A">A</a>] </b>
