@@ -14,7 +14,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">Zadania</a>
+                <a class="navbar-brand" href="/">IT Tools</a>
             </div>
             <div class="collapse navbar-collapse" id="ultrasupercoolnavbar">
                 <?php
@@ -196,9 +196,9 @@
         const options = {
             bottom: '64px', // default: '32px'
             right: 'unset', // default: '32px'
-            left: '32px', // default: 'unset'
-            time: '0.4s', // default: '0.3s'
-            mixColor: '#fff', // default: '#fff'
+            left: '64px', // default: 'unset'
+            time: '0.5s', // default: '0.3s'
+            mixColor: '#e0e0e0', // default: '#fff'
             backgroundColor: '#e0e0e0',  // default: '#fff'
             buttonColorDark: '#100f2c',  // default: '#100f2c'
             buttonColorLight: '#fff', // default: '#fff'
@@ -208,7 +208,7 @@
         }
 
         function addDarkmodeWidget() {
-            new Darkmode().showWidget();
+            new Darkmode(options).showWidget();
         }
         window.addEventListener('load', addDarkmodeWidget);
     </script>
