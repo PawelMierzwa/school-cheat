@@ -14,7 +14,7 @@
 		} 
 	}
 	if (empty($old) or empty($new)){
-		$_SESSION['result'] = "Незаполнены все формы";
+		$_SESSION['result'] = "Nie wypełnione wszyskie formy";
 		header('Location: /cabinet');
 	}
 
@@ -28,18 +28,17 @@
 
 	if ($myrow['password'] == $old) {
 		$change = mysqli_query($link, "UPDATE users SET password='$new' WHERE username = '$login'");
-		// Проверяем, есть ли ошибки
 		if ($change=='TRUE'){
-		$_SESSION['result'] = "Пароль изменён";
+		$_SESSION['result'] = "Hasło zmienione";
 		header('Location: /cabinet');
 		}
 		else{
-			$_SESSION['result'] = "Пароль не изменён";
+			$_SESSION['result'] = "Hasło nie zmienione";
 			header('Location: /cabinet');
 		}
 	}
 	else{
-		$_SESSION['result'] = "Введён не настоящий пароль";
+		$_SESSION['result'] = "Wpisano złe hasło";
 		header('Location: /cabinet');
 	}
 ?>

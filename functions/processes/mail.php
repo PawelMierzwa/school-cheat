@@ -18,54 +18,54 @@
 					$result = mysqli_query($link, "INSERT INTO tokens (token,user,type,old,new,status) VALUES('$token','$login','change_mail','$old','$mail','clear')");
 					$message = '
 					<html>
-					<head>
-					  <title>Подтверждение почты</title>
-					</head>
-					<body>
-					  <p>Подтверждение почты</p>
-					  От аккаунта ' . $login. ' поступила просьба подключать эту почту к аккаунту в целях безопасности. <br>Если вы отправили этот запрос и хотите подключить почту к аккаунту то нажмите кнопку ниже. <br>
+						<head>
+							<title>Potwierdzenie zmiany</title>
+						</head>
+						<body>
+						<p>Potwierdzenie</p>
+						Z konta ' . $login. ' Poproszono o połączenie tej poczty z tym kontem ze względów bezpieczeństwa. <br>Jeśli wysłałeś tę prośbę i chcesz połączyć pocztę ze swoim kontem, kliknij poniższy przycisk. <br>
 						<form action="https://endergame.ru/functions/token" method="post">
 							<p>
 								<input name="user" type="hidden" value="'.$login.'">
 								<input name="token" type="hidden" value="'.$token.'">
 								<input name="type" type="hidden" value="'.$type.'">
 							</p>
-							<p>
-								<input type="submit" value="Подключить" style="border-radius: 20px;">
-						</form><br>Если вы его не отправляли то просто проигнорируйте это письмо.
-					</body>
+						<p>
+						<input type="submit" value="Prześlij" style="border-radius: 20px;">
+						</form><br>Jeśli go nie wysłałeś, radzimy zmienić hasło.
+						</body>
 					</html>
 					';
 					$headers  = 'MIME-Version: 1.0' . "\r\n";
 					$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-					mail($mail, "Смена почты", $message, $headers);
+					mail($mail, "Potwierdzenie zmiany", $message, $headers);
 					header('Location: /cabinet');
 					break;
 				case "add":
 					$result = mysqli_query($link, "INSERT INTO tokens (token,user,type,old,new,status) VALUES('$token','$login','add_mail','','$mail','clear')");
 					$message = '
 					<html>
-					<head>
-					  <title>Подтверждение почты</title>
-					</head>
-					<body>
-					  <p>Подтверждение почты</p>
-					  От аккаунта ' . $login. ' поступила просьба подключать эту почту к аккаунту в целях безопасности. <br>Если вы отправили этот запрос и хотите подключить почту к аккаунту то нажмите кнопку ниже. <br>
+						<head>
+							<title>Potwierdzenie dodania</title>
+						</head>
+						<body>
+						<p>Potwierdzenie</p>
+						Z konta ' . $login. ' Poproszono o połączenie tej poczty z tym kontem ze względów bezpieczeństwa. <br>Jeśli wysłałeś tę prośbę i chcesz połączyć pocztę ze swoim kontem, kliknij poniższy przycisk. <br>
 						<form action="https://endergame.ru/functions/token" method="post">
 							<p>
 								<input name="user" type="hidden" value="'.$login.'">
 								<input name="token" type="hidden" value="'.$token.'">
 								<input name="type" type="hidden" value="'.$type.'">
 							</p>
-							<p>
-								<input type="submit" value="Подключить" style="border-radius: 20px;">
-						</form><br>Если вы его не отправляли то просто проигнорируйте это письмо.
-					</body>
+						<p>
+						<input type="submit" value="Prześlij" style="border-radius: 20px;">
+						</form><br>Jeśli go nie wysłałeś, radzimy zmienić hasło.
+						</body>
 					</html>
 					';
 					$headers  = 'MIME-Version: 1.0' . "\r\n";
 					$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-					mail($mail, "Смена почты", $message, $headers);
+					mail($mail, "Dodanie poczty", $message, $headers);
 					header('Location: /cabinet');
 					break;
 				default: header('Location: /cabinet'); break;
@@ -73,7 +73,7 @@
 			header('Location: /cabinet');
 		}
 		else{
-			$_SESSION['result'] = "Не введена почта";
+			$_SESSION['result'] = "Nie podana poczta";
 			header('Location: /cabinet');
 		}
 	}
