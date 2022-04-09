@@ -10,7 +10,10 @@
 <?php
     session_start();
 
+	if($_SERVER['HTTP_HOST'] == "sigmatools.org"){
+		header('Location: https://www.sigmatools.org');
+}
+
     include 'template/header.php';
 	include 'engine/template.php';
-
 ?>
