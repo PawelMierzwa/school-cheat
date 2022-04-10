@@ -14,7 +14,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/">IT Tools</a>
+                <a class="navbar-brand" href="/">Sigma Tools</a>
             </div>
             <div class="collapse navbar-collapse" id="ultrasupercoolnavbar">
                 <?php
@@ -200,6 +200,7 @@
             time: '0.5s', // default: '0.3s'
             mixColor: '#e0e0e0', // default: '#fff'
             backgroundColor: '#e0e0e0',  // default: '#fff'
+            // backgroundColorDark: '#1f1f1f',
             buttonColorDark: '#100f2c',  // default: '#100f2c'
             buttonColorLight: '#fff', // default: '#fff'
             saveInCookies: true, // default: true,
