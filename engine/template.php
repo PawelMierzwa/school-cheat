@@ -1,26 +1,27 @@
 <?php
 
 $dir = 'template/';
+$user = 'functions/user/';
+$cabinet = 'functions/cabinet/';
 
 $file = $_SERVER['REQUEST_URI'];
-$ext = pathinfo($file, PATHINFO_EXTENSION);
 $file = pathinfo($file, PATHINFO_FILENAME);
 
 switch($file){
 	case 'register':
-		include 'functions/user/reg.php';
+		include $user.'reg.php';
 		break;
 	case 'recover':
-		include 'functions/user/recover.php';
+		include $user.'recover.php';
 		break;
 	case 'login':
-		include 'functions/user/index.php';
+		include $user.'index.php';
 		break;
     case '':
         include $dir.'index.html';
         break;
     case 'cabinet':
-        include 'functions/cabinet/cabinet.php';
+        include $cabinet.'cabinet.php';
         break;
     default:
         if (file_exists($dir.$file.'.html')) {
