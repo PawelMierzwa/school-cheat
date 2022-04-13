@@ -11,8 +11,9 @@
     session_start();
 
 	if($_SERVER['HTTP_HOST'] == "sigmatools.org"){
-		header('Location: https://www.sigmatools.org');
-}
+        $file = $_SERVER['REQUEST_URI'];
+		header('Location: https://www.sigmatools.org/'.$file);
+    }
 
     include 'template/header.php';
 	include 'engine/template.php';
