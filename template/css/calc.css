@@ -1,20 +1,17 @@
-.content{
-    top: 35%;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    z-index: 2;
+.content {
+	top: 40%;
+	position: relative;
 }
 
 .calculator {
+    margin-left: 35px;
     width: 350px;
     height: 320px;
     background-color: #1f1d1d;
     box-shadow: 0px 0px 0px 10px #666;
     border: 5px solid black;
     border-radius: 10px;
-    position: absolute;
-    z-index: 2;
+    position: relative;
 }
 
 #display {

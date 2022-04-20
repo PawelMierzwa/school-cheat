@@ -50,7 +50,7 @@
                         <form method="POST">
                             <input type="text" name="searchform" placeholder="Search" size="25">
                             <button type="submit" id="search-button">
-                                <img src="template/img/search.svg" width="25px" height="25px">
+                                <img src="template/img/search.svg" width="24px" height="19px">
                             </button>
                         </form>
                     </center>
